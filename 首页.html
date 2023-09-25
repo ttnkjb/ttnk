@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style3.css">
+    <title>兔兔奶块</title>
+</head>
+
+<body>
+    <div class="ct">
+        <video src="./video/唯美.mp4" autoplay="autoplay+++" controls="controls" loop muted>你的浏览器不支持</video>
+        <div id="tiem">
+            <p>
+                <span id="hour" class="sj">00</span>
+                <span class="sj">:</span>
+                <span id="minute" class="sj">00</span>
+                <span class="sj">:</span>
+                <span id="second" class="sj">00</span>
+            </p>
+        </div>
+        <div class="xzt">
+            <span class="font">欢 迎 来 到 兔 兔 奶 块</span>
+        </div>
+        <div class="dh">
+            <ul>
+                <li><a href="./首页.html" title="这里很奇妙哦！" id="xz">首页</a></li>
+                <li><a href="./脚本工具.html" title="要用工具都在这里面啦">脚本工具</a></li>
+                <li><a href="./兔兔.html" title="这里有视频教程哦">脚本教程</a></li>
+                <li><a href="./使用文档.html" title="去看看文档吧！">使用文档</a></li>
+            </ul>
+        </div>
+        <div class="ssl">
+                    <form action="https://www.baidu.com/s" target="_blank" method="get" class="ssk">
+            <input type="text" class="ssk2" name="word" placeholder="需要什么搜一搜">
+            <input type="submit" class="ssk3" value="搜索">
+        </form>
+        </div>
+
+    </div>
+    <script>
+        function getTime() {
+            var date = new Date();
+            var hour = date.getHours();
+            var min = date.getMinutes();
+            var sec = date.getSeconds();
+            hour = hour < 10 ? '0' + hour : hour;
+            min = min < 10 ? '0' + min : min;
+            sec = sec < 10 ? '0' + sec : sec;
+            document.getElementById('hour').innerHTML = hour;
+            document.getElementById('minute').innerHTML = min;
+            document.getElementById('second').innerHTML = sec;
+        }
+        window.setInterval(getTime, 1000)
+    </script>
+        <audio controls autoplay="autoplay" loop="loop" class="music" style="display: none;">
+            <source src="./video/音乐.mp3" type="audio/mpeg" />
+        </audio>
+</body>
+
+</html>
